@@ -1,0 +1,26 @@
+A graph is a data structure that captures relationships between objects. It’s made up
+of vertices connected by edges.
+
+nodes/vertices are elements and lines connecting them are edges.
+
+Two node or vertices are adjacent if they are connected to each other through an edge.
+
+Path represents a sequence of edges between the two vertices.
+
+In a weighted graph, every edge has a weight associated with it that represents the
+cost of using this edge. This lets you choose the cheapest or shortest path between
+two vertices.
+
+As well as assigning a weight to an edge, your graphs can also have direction.
+Directed graphs are more restrictive to traverse, as an edge may only permit traversal
+in one direction.
+
+You can think of an undirected graph as a directed graph where all of the edges are
+bi-directional.
+In an undirected graph:
+• Two connected vertices have edges going back and forth.
+• The weight of an edge applies to both directions.
+
+An adjacency matrix uses a square matrix to represent a graph. This matrix is a
+two-dimensional array wherein the value of matrix[row][column] is the weight of
+the edge between the vertices at row and column.

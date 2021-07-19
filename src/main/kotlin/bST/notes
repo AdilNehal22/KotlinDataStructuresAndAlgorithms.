@@ -1,0 +1,20 @@
+
+A binary search tree, or BST, is a data structure that facilitates fast lookup, insert
+and removal operations.
+BINARY SEARCH TREE-->> A type of binary tree which contains the following rules...
+
+1_All nodes of left subtree are lesser than parents.
+2_All nodes of right subtree are greater than parents.
+3_left and right subtrees are are also BST.
+4_No duplicate nodes.
+PROPERTY
+5_Inorder traversal of BST always gives ascending sorted array
+
+Binary search trees use this property to save you from performing unnecessary
+checking. As a result, lookup, insert and removal have an average time complexity of
+O(log n), which is considerably faster than linear data structures such as arrays and
+linked lists.
+
+By leveraging the rules of the BST, you can avoid unnecessary checks and cut the
+search space in half every time you make a decision. That’s why element lookup in a
+BST is an O(log n) operation.

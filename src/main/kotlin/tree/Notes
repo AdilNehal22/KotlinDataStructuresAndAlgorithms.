@@ -1,0 +1,32 @@
+The tree is a data structure.It’s used to tackle many
+recurring challenges in software development, such as:
+• Representing hierarchical relationships.
+• Managing sorted data.
+• Facilitating fast lookup operations.
+There are many types of trees, and they come in various shapes and sizes
+
+ _trees are made up of nodes.Each node encapsulates some data and keeps track of its children.
+
+ _Trees are viewed starting from the top and branching toward the bottom — just like a
+real tree, only upside-down.
+Every node, except for the first one, is connected to a single node above, which is
+referred to as a parent node. The nodes directly below and connected to the parent
+node are known as child nodes. In a tree, every child has exactly one parent.
+
+_The topmost node in the tree is called the root of the tree. It’s the only node that has
+ no parent
+
+ _A node that has no children is called a leaf
+
+
+ A binary tree is a tree in which each node has at most two children, often
+ referred to as the left and right children
+
+ to check if two bst's are equal....
+ If both trees are empty then return 1.
+ Else If both trees are non -empty
+ Check data of the root nodes (tree1->data == tree2->data)
+ Check left subtrees recursively i.e., call sameTree(tree1->left_subtree, tree2->left_subtree)
+ Check right subtrees recursively i.e., call sameTree(tree1->right_subtree, tree2->right_subtree)
+ If the values returned in the above three steps are true then return 1.
+ Else return 0 (one is empty and other is not).

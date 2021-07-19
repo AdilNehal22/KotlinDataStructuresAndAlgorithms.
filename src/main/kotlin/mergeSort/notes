@@ -1,0 +1,5 @@
+Merge sort is one of the most efficient sorting algorithms. With a time complexity of
+O(n log n), it’s one of the fastest of all general-purpose sorting algorithms. The idea
+behind merge sort is divide and conquer — to break a big problem into several
+smaller, easier-to-solve problems, and then combine those solutions into a final
+result. The merge sort mantra is to split first and merge after.

@@ -1,0 +1,33 @@
+Queues are lists that maintain the order of elements using first in, first out (FIFO)
+ordering. A priority queue is another version of a queue. However, instead of using
+FIFO ordering, elements are dequeued in priority order.
+
+A priority queue can have either a:
+
+• Max-priority: The element at the front is always the largest.
+• Min-priority: The element at the front is always the smallest.
+
+A priority queue is especially useful when you need to identify the maximum or
+minimum value within a list of elements.
+
+The priority queue will implement the Queue interface and the common operations:
+
+• enqueue: Inserts an element into the queue. Returns true if the operation is
+successful.
+
+.dequeue: Removes the element with the highest priority and returns it. Returns
+null if the queue is empty.
+
+• count: Property for the number of items in the queue.
+
+• isEmpty: Checks if the queue is empty. The implementation just checks if the
+count property is 0.
+
+• peek: Returns the element with the highest priority without removing it. Returns
+null if the queue is empty
+
+Heap: This is a natural choice for a priority queue. A heap is more efficient than
+a sorted array because a heap only needs to be partially sorted. All heap
+operations are O(log n) except extracting the min value from a min priority heap
+is a lightning-fast O(1). Likewise, extracting the max value from a max priority
+heap is also O(1).

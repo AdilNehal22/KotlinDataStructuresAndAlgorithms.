@@ -1,0 +1,39 @@
+A heap is a complete binary tree data structure also known as a binary heap that
+you can construct using an array.
+
+Heaps come in two flavors:
+1. Maxheap, in which elements with a higher value have a higher priority.
+2. Minheap, in which elements with a lower value have a higher priority.
+
+It's important to say that the concept of heap is valid for every type of
+object that can be compared to others of the same type.
+
+A heap has an important characteristic that must always be satisfied. This is known
+as the heap invariant or heap property.
+
+Property..
+In a maxheap, parent nodes must always contain a value that is greater than or equal
+to the value in its children. The root node will always contain the highest value.
+
+In a minheap, parent nodes must always contain a value that is less than or equal to
+the value in its children. The root node will always contain the lowest value.
+
+Another important property of a heap is that it’s a complete binary tree. This means
+that every level must be filled, except for the last level. It’s like a video game wherein
+you can’t go to the next level until you have completed the current one.
+
+Some useful applications of a heap include:
+• Calculating the minimum or maximum element of a collection.
+• Heap sort.
+• Implementing a priority queue.
+• Supporting graph algorithms, like Prim’s or Dijkstra’s, with a priority queue.
+
+Trees hold nodes that store references to their children. In the case of a binary tree,
+these are references to a left and a right child.
+Heaps are indeed binary trees, but you can represent them with a simple array. This
+seems like an unusual way to build a tree, but one of the benefits of this heap
+implementation is efficient time and space complexity, as the elements in the
+heap are all stored together in memory
+
+Making an existing array following the heap properties is an operation usually
+called heapify.

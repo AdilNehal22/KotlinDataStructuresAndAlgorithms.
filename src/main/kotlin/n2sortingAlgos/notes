@@ -1,0 +1,120 @@
+O(n²) time complexity is not great performance, but the sorting algorithms in this
+category are easy to understand and useful in some scenarios. These algorithms are
+space efficient, and they only require constant O(1) additional memory space. For
+small data sets, these sorts compare favorably against more complex sorts. It’s
+usually not recommended to use O(n²) in production code, but you’ll need to start
+somewhere, and these algorithms are a great place to start.
+
+In this chapter, you’ll look at the following sorting algorithms:
+• Bubble sort.
+• Selection sort.
+• Insertion sort.
+
+All of these are comparison-based sorting methods. In other words, they rely on a
+comparison method, such as the less than operator, to order elements. You measure
+a sorting technique’s general performance by counting the number of times this
+comparison gets called.
+
+BUBBLE SORT.
+One of the simplest sorts is the bubble sort. The bubble sort repeatedly compares
+adjacent values and swaps them, if needed, to perform the sort. The larger values in
+the set will, therefore, bubble up to the end of the collection.
+
+example [9,4,10,3]
+[4,9,10,3]
+[4,9,10,3]
+[4,9,3,|10] after 1 pass the largest value is pushed to last index that is now our sorted part
+             and then we decide we don't have to go to sorted part.
+[4,9,3,|10]
+[4,3,|9,10] after 2 pass the largest value is pushed to last before the most largest
+
+[3,|4,9,10] after 3 pass again the largest value is pushed
+[|3,4,9,10]
+
+bubbleSort(Arraylist){
+    for(list[end] to list[1]){
+        for(list[i] to list[end]){
+            if(list[i]>list[i+1]
+                swap(i and i+1)
+        }
+    }
+}
+
+SELECTION SORT
+
+Selection sort follows the basic idea of bubble sort but improves upon this
+algorithm by reducing the number of swapAt operations. Selection sort only swaps at
+the end of each pass. You’ll see how that works in the following implementation
+
+During each pass, selection sort finds the lowest unsorted value and swaps it into
+place:
+1. first setting the first[0] element(current(c)) as lowest(l) no matter either it is or not.
+2. then starting from after current(o) and compare if every number after current is smaller
+     than lowest if yes, then this number will be new lowest.
+3. then swap new lowest with the current
+4. and loop continues.
+
+[9,4,10,3]
+ c o
+ l
+
+[9,4,10,3]
+ c o
+   l
+
+[9,4,10,3]
+   c  o
+   l
+
+[9,4,10,3]
+     c  o
+     l
+
+ [9,4,10,3]
+       c o
+         l   minValue found now swap it the [first]
+
+ [3,4,10,9] again the above procedure will happen with this new array until all sorted
+
+ [3,4,9,10]
+
+algo selectionSort(array)
+
+    for(current -> 0 until array->last)
+        lowest <- current
+        for(other -> current+1 until array->size)
+            if(array[other] < array[lowest])
+                lowest <- other
+
+        swap(lowest,current)
+
+ INSERTION SORT
+ In insetion sort the given array is divided into two parts
+
+ [sorted sub array | unsorted sub array]
+
+ then we will trace unsorted one from 'its' start then from here we'll pick one value and put it into
+ sorted part on its right place(after comparision with other values)
+
+ [9,4,10,3]
+
+ [9|,4,10,3] 9 is our sorted part
+
+ first we will pick 4 store it on temporary variable and then compare if 9 is greater
+ than 4 then you'll 9 by one value
+
+ [,9|,10,3] then still if there more number to compare our 4 with if no then simply put it
+ [4,9|,10,3] 4,9 sorted part
+
+ then pick 10 and see if 9 is greater yes no then see if 4 is greater no again so 10 is putt after 9
+ [4,9,10|,3] now take 3 and compare with first 10. Yes greater is 10 so 10 shifted right by one
+
+ [4,9, ,10] then again see if 9 greater then 3 yes! so shift 9 by one
+
+ [4, ,9,10] then again see if 4 is greater than 3 Yes so shift 4 right by one
+
+ [,4,9,10] now again see if there are still number left to compare with 3
+ if no this means 3 will be inserted at 0 index
+
+ [3,4,9,10] sorted!
+

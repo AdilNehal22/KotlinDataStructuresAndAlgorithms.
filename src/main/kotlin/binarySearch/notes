@@ -1,0 +1,50 @@
+Binary search algorithm...
+
+Binary search is one of the most efficient searching algorithms with a time
+complexity of O(log n). This is comparable with searching for an element inside a
+balanced binary search tree.
+
+Two conditions need to be met before you can use binary search:
+• The collection must be able to perform index manipulation in constant time.
+Kotlin collections that can do this include the Array and the ArrayList.
+• The collection must be sorted.
+
+the method is... suppose you want 80 from an array
+
+10  20  30  40  50  60  70  80  90  100 -> values
+0   1   2   3   4   5   6   7   8    9 -> index
+
+you take low and high as
+
+l                                    h
+10  20  30  40  50  60  70  80  90  100 -> values
+0   1   2   3   4   5   6   7   8    9 -> index
+
+then you take mid value by mid = (l+h)/2, here mid = 4 i.e. 50
+ then you'll check if required value is smaller or greater than mid if smaller you reject
+ right whole of the mid and if greater than you reject left whole of the list and goto after mid
+
+ here myValue<mid, reject the left whole of mid
+ and then you l becomes the ...
+
+ 50  60  70  80  90  100 -> values
+ 4   5   6   7   8    9  ->  index
+ l                    h
+
+ again find mid, mid = 6, then check if(myValue<or>mid), this time again greater than list
+ becomes..
+
+ 70  80  90  100 -> values
+  6   7   8    9  ->  index
+  l            h
+
+  again find mid and change l and h
+
+  this time mid is 7 so now both left and right of mid are gone
+
+  80
+  7
+l,h,mid     then again check, this time equal so return.
+
+  Binary search achieves an O(log n) time complexity this way.
+

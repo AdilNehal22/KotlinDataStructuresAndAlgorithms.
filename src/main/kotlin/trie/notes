@@ -1,0 +1,50 @@
+The trie (pronounced try) is a tree that specializes in storing data that can be
+represented as a collection, such as English words:
+        root
+       / \  \
+      c   t  b.
+     / \   \
+    a   u   o.
+   /     \
+  t.      t.
+           \
+            e.
+A trie containing the words CAT, CUT, CUTE, TO, and B
+
+Each character in a string is mapped to a node. The last node in each string is marked
+as a terminating node (a dot in the image above). The benefits of a trie are best
+illustrated by looking at it in the context of prefix matching. each node can
+represent a single character.
+
+You form a word by tracing the collection of characters from the root to a node with
+a special indicator — a terminator — represented by a black dot. An interesting
+characteristic of the trie is that multiple words can share the same characters.
+
+root has no character. Trie is also called Prefix Tree.
+
+the index mapping formula
+             this is an array of char
+eg,       a  b  c..h..................z
+         |  |  |  |  |  |......|  |  |  |
+          0  1  2  7..................25
+
+         a: Char = 'a' //a = 65 is ascii
+         a - 'a' = 0, a will be mapped at index 0
+
+         h: Char = 'h'
+         h - 'a' = 7 because h is 7 steps forward then a and h will be mapped at index 7
+
+         z: Char = 'z'
+         z - 'a' = 25, z will be mapped at index 25
+
+         so we can map a character with an index value with formula
+
+         index = charToMap - 'a'
+
+we will use array of length 26 and a 'check' that is word ending? whose initial value
+will be false until the word ends.
+
+for inserting there are are three cases..
+inserting in completely empty trie
+inserting word with no common prefix
+inserting a word with common prefix
